@@ -5,15 +5,14 @@ import VuexObjectify from 'vuex-objectify';
 import 'buefy/dist/buefy.css'
 
 export default ({Vue, options, router, siteData}) => {
+  Vue.use(Vuex)
+  Vue.use(Buefy, {
+    defaultIconPack: 'fa'
+  });
   
   const store = new Vuex.Store({
     modules: {
     }
   })
-  
   Vue.use(VuexObjectify, { store, dev: true });
-  
-  Vue.use(Buefy, {
-    defaultIconPack: 'fa'
-  });
 };

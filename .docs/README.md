@@ -1,24 +1,15 @@
-# docs
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+home: true
+heroText: vuex-objectify
+tagline: Creating an interface to communicate with the vuex store
+actionText: Get Started →
+actionLink: /guide/install
+features:
+- title: Simplicity First
+  details: You just need to worry about writing javascript
+- title: Object Oriented Interface
+  details: No more constants needed to use for retrieving dispatches, commits and getters
+- title: Performant
+  details: You still get the same performance from the vuex library.
+footer: MIT Licensed
+---

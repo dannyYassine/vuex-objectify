@@ -28,9 +28,6 @@ module.exports = {
           title: 'Usage',   // required
           collapsable: false, // optional, defaults to true
           children: [
-            ['guide/basic_usage', 'Basic'],
-            ['guide/groups', 'Groups'],
-            ['guide/using_options', 'Using Options']
           ]
         },
         {
