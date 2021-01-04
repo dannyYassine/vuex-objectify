@@ -1,0 +1,31 @@
+@import 'theme-overrides';
+
+.full-height {
+  margin-top: 40vh;
+  margin-bottom: 60vh;
+}
+
+.spacer {
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.spacer-top {
+  margin-top: 300px;
+}
+
+.spacer-bottom {
+  margin-bottom: 300px;
+}
+
+.tag:not(body) {
+  background: unset;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}

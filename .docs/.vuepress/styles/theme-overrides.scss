@@ -1,0 +1,11 @@
+.theme-default-content:not(.custom) {
+  max-width: unset !important;
+}
+
+.token.number {
+  font-size: unset;
+  background-color: unset;
+  margin-right: unset;
+  min-width: unset;
+  padding: unset;
+}

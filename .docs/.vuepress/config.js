@@ -28,12 +28,16 @@ module.exports = {
           title: 'Usage',   // required
           collapsable: false, // optional, defaults to true
           children: [
+            ['guide/requirement', 'Requirement'],
+            ['guide/usage', 'Basic'],
+            ['guide/how', 'How does it work?']
           ]
         },
         {
           title: 'Api',   // required
           collapsable: false, // optional, defaults to true
           children: [
+            ['guide/plugin_options', 'Plugin Options'],
           ]
         }
       ]

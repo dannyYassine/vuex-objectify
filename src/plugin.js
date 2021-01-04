@@ -2,6 +2,10 @@ import { ProxyBuilder } from './ProxyBuilder';
 import { getCommit, getDispatch, getGetter } from './helpers';
 
 export const VuexObjectify = {
+  /**
+   * @param Vue
+   * @param {object} options
+   */
   install(Vue, options) {
     if (!options.store) {
       throw new Error('Missing required Vuex Store');
@@ -9,14 +13,18 @@ export const VuexObjectify = {
     
     this.$store = options.store;
     
+    if (options.attachToVue) {
+      Vue.prototype.$dispatches = dispatches;
+      Vue.prototype.$commits = commits;
+      Vue.prototype.$getters = getters;
+    }
+    
     if (options.dev) {
       window.__vuexObjectify__ = {
         dispatches,
         commits,
         getters,
-        getStore: () => {
-          return this.$store
-        }
+        store: this.$store
       };
     }
   }

@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import VuexObjectify from 'vuex-objectify';
 
 import 'buefy/dist/buefy.css'
+import './styles/app.scss';
 
 export default ({Vue, options, router, siteData}) => {
   Vue.use(Vuex)
