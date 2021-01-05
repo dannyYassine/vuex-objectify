@@ -26,7 +26,13 @@ commits.module.setFirstThing(10);
 
 getters.module.getSomething();
 ```
+
+<br>
+<h4 align="center">
+  No more <b>constants</b>, no more <b>strings</b>
+</h4>
 </div>
+<br>
 
 ## Getting Started
 
