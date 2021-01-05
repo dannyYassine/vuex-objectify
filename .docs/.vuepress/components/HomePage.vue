@@ -2,7 +2,7 @@
   <div id="home">
     <HeaderNav />
     <section>
-      <img src="/logo.png">
+      <img src="/vuex-objectify/logo.png">
       <p class="description mt-6 mb-6"><b>Dynamically</b> creates an <b>interface of objects</b> to easily communicate with vuex</p>
       <div class="columns mt-2">
         <div class="column is-6">
