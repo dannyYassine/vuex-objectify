@@ -30,6 +30,7 @@ module.exports = {
           children: [
             ['guide/requirement', 'Requirement'],
             ['guide/usage', 'Basic'],
+            ['guide/submodules', 'Sub-Modules'],
             ['guide/how', 'How does it work?']
           ]
         },

@@ -2,9 +2,9 @@
   <div id="home">
     <HeaderNav />
     <section>
-      <img src="/vuex-objectify/logo.png">
-      <p class="description mt-6 mb-6"><b>Dynamically</b> creates an <b>interface of objects</b> to easily communicate with vuex</p>
-      <div class="columns mt-2">
+      <img class="animate-delay-1" src="/vuex-objectify/logo.png">
+      <p class="description animate-delay-1 mt-6 mb-6"><b>Dynamically</b> creates an <b>interface of objects</b> to easily communicate with vuex</p>
+      <div class="animate-delay-2 columns mt-2">
         <div class="column is-6">
           <h4>Turning this:</h4>
           <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'module/action'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -16,7 +16,7 @@
         </div>
         <div class="column is-6">
           <h4>Into this:</h4>
-          <div class="language-javascript extra-class"><pre class="language-javascript"><code>dispatches<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <div class="language-javascript extra-class"><pre class="language-javascript"><code>dispatches<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 commits<span class="token punctuation">.</span>module<span class="token punctuation">.</span><span class="token function">setFirstThing</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -24,10 +24,10 @@ getters<span class="token punctuation">.</span>module<span class="token punctuat
 </code></pre></div>
         </div>
       </div>
-      <div class="my-editor animate-delay-3" @click="onCodeClicked">
+      <div class="my-editor animate-delay-3 animate-delay-3" @click="onCodeClicked">
         $ yarn add vuex-objectify
       </div>
-      <div class="mt-6">
+      <div class="animate-delay-3 mt-6">
         <router-link to="/guide/install">
           <b-button class="get-started" type="is-dark">Get Started &#10142;</b-button>
         </router-link>
@@ -89,6 +89,45 @@ section {
   }
 }
 
+.animate-delay-1 {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: animate-delay;
+  animation-timing-function: ease;
+}
+
+.animate-delay-2 {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-name: animate-delay;
+  animation-timing-function: ease;
+}
+
+.animate-delay-3 {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  animation-name: animate-delay;
+  animation-timing-function: ease;
+}
+
+
+@keyframes animate-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* required class */
 .my-editor {
   cursor: pointer;
@@ -113,6 +152,15 @@ section {
 
   &::v-deep div.prism-editor__container {
     top: -6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .get-started {
+    margin-bottom: 60px;
+  }
+  section {
+    margin: 40px 5px;
   }
 }
 </style>

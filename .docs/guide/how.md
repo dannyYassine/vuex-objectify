@@ -13,7 +13,7 @@ on the Vuex store (perfect to write tests!). And an `ide_helper` is on my to do 
 
 <br>
 
-To add, `dispatches` captures the first argument `count` as the module you are wishing to access its methods, then returns another `Proxy` object.
+To add, in the example above, `dispatches` captures the first argument `count` as the module you are wishing to access its methods, then returns another `Proxy` object.
 Its implementation will check the next accessed property and will translate it to `store.dispath()`.
 For example, if we will access `dispatches.count.increment()`, this will become:
 
