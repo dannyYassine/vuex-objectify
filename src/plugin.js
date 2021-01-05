@@ -19,7 +19,7 @@ export const VuexObjectify = {
       Vue.prototype.$getters = getters;
     }
     
-    if (options.dev) {
+    if (options.dev && typeof window !== 'undefined') {
       window.__vuexObjectify__ = {
         dispatches,
         commits,

@@ -1,5 +1,6 @@
 ---
 home: true
+layout: HomePage
 heroText: vuex-objectify
 tagline: Creating an interface to communicate with the vuex store
 actionText: Get Started →
