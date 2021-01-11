@@ -2,7 +2,13 @@
 <p align="center">
 <img height="400px" style="max-width:100%" src="https://github.com/dannyYassine/vuex-objectify/blob/master/.docs/.vuepress/public/logo.png?raw=true" alt="logo.png">
 </p>
-<br>
+
+<p align="center">
+<a href='https://coveralls.io/github/dannyYassine/vuex-objectify?branch=master'><img src='https://coveralls.io/repos/github/dannyYassine/vuex-objectify/badge.svg?branch=master' alt='Coverage Status' /></a>
+<a href='https://www.npmjs.com/package/vuex-objectify'><img src='https://img.shields.io/npm/v/vuex-objectify.svg' alt='Coverage Status' /></a>
+<a href='https://travis-ci.org/dannyYassine/vuex-objectify'><img src='https://travis-ci.org/dannyYassine/vuex-objectify.svg?branch=master' alt='Build Status' /></a>
+</p>
+
 <p align="center">
 <b>Dynamically</b> creates an <b>interface of objects</b> to easily communicate with vuex
 </p>

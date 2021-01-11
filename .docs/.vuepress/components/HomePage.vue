@@ -4,7 +4,14 @@
     <section>
       <div class="section-content">
         <img class="animate-delay-1" src="/vuex-objectify/logo.png">
-        <p class="description animate-delay-1 mt-6 mb-6">
+
+        <div class="badges animate-delay-1 mt-5">
+          <a href='https://coveralls.io/github/dannyYassine/vuex-objectify?branch=master'><img src='https://coveralls.io/repos/github/dannyYassine/vuex-objectify/badge.svg?branch=master' alt='Coverage Status' /></a>
+          <a href='https://www.npmjs.com/package/vuex-objectify'><img src='https://img.shields.io/npm/v/vuex-objectify.svg' alt='Library Version' /></a>
+          <a href='https://travis-ci.org/dannyYassine/vuex-objectify'><img src='https://travis-ci.org/dannyYassine/vuex-objectify.svg?branch=master' alt='Build Status' /></a>
+        </div>
+
+        <p class="description animate-delay-1 mt-5 mb-5">
           <b>Dynamically</b> creates an <b>interface of objects</b> to easily communicate with vuex
         </p>
         <div class="animate-delay-2 columns mt-2">
@@ -73,6 +80,12 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  .badges {
+    img {
+      height: 20px
+    }
+  }
 
   h1 {
     font-size: 48px;
