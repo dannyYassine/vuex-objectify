@@ -5,6 +5,7 @@ module.exports = {
   description: 'Creating an interface to communicate with the vuex store',
   head: [
     ['link', { rel: "icon", href: "/favicon.ico"}],
+    ['meta', { name: "viewport"}],
   ],
   theme: '@vuepress/theme-default',
   plugins: ['@vuepress/register-components'],
