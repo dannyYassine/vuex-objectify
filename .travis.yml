@@ -20,11 +20,9 @@ jobs:
     - yarn install
     deploy:
       provider: npm
-      email: "$ENV_EMAIL"
+      email: $ENV_EMAIL
       api_key:
-        secure: "$ENV_NPM_API_KEY"
-      on:
-        repo: dannyYassine/vuex-objectify
+        secure: $ENV_NPM_API_KEY
       skip_cleanup: 'true'
 stages:
 - name: install
