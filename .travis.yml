@@ -20,10 +20,9 @@ jobs:
     - yarn install
     deploy:
       provider: npm
-      email: $ENV_EMAIL
+      email: "$ENV_EMAIL"
       branch: master
-      api_key: $ENV_NPM_API_KEY
-
+      api_key: "$ENV_NPM_API_KEY"
 stages:
 - name: install
   if: "(type = pull_request)"
