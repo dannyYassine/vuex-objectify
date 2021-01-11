@@ -1,26 +1,37 @@
 language: node_js
 node_js:
-  - 'node'
+- node
 cache: npm
-
 jobs:
   include:
-    - stage: install
-      script: npm install
-    - stage: coverage
-      script:
-        - npm run test:unit:coverage
-        - npm run send-coverage
-    - stage: version
-      before_script:
-        - chmod +x .travis/validate-version.js
-      script:
-        - node .travis/validate-version.js
+  - stage: install
+    script: npm install
+  - stage: coverage
+    script:
+    - npm run test:unit:coverage
+    - npm run send-coverage
+  - stage: version
+    before_script:
+    - chmod +x .travis/validate-version.js
+    script:
+    - node .travis/validate-version.js
+  - stage: deploy-npm
+    install:
+    - npm install
+    script:
+    - npm run build
+    deploy:
+      provider: npm
+      email: $ENV_EMAIL
+      branch: master
+      api_key: $ENV_NPM_API_KEY
 
 stages:
-  - name: install
-    if: (type = pull_request)
-  - name: coverage
-    if: (type = pull_request)
-  - name: version
-    if: (type = pull_request AND branch = master) OR (branch = master)
+- name: install
+  if: "(type = pull_request)"
+- name: coverage
+  if: "(type = pull_request)"
+- name: version
+  if: "(type = pull_request AND branch = master) OR (branch = master)"
+- name: deploy-npm
+  if: "(branch = master) AND (type = push)"
