@@ -24,7 +24,6 @@ jobs:
       api_key:
         secure: "ENV_NPM_API_KEY"
       on:
-        tags: true
         repo: dannyYassine/vuex-objectify
       skip_cleanup: 'true'
 stages:
