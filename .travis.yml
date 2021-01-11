@@ -22,7 +22,7 @@ jobs:
       provider: npm
       email: "$ENV_EMAIL"
       api_key:
-        secure: "ENV_NPM_API_KEY"
+        secure: "$ENV_NPM_API_KEY"
       on:
         repo: dannyYassine/vuex-objectify
       skip_cleanup: 'true'
