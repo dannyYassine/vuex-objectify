@@ -5,7 +5,7 @@ cache: npm
 jobs:
   include:
   - stage: install
-    script: npm install
+    script: yarn install
   - stage: coverage
     script:
     - npm run test:unit:coverage
@@ -16,10 +16,8 @@ jobs:
     script:
     - node .travis/validate-version.js
   - stage: deploy-npm
-    install:
-    - npm install
     script:
-    - npm run build
+    - yarn install
     deploy:
       provider: npm
       email: $ENV_EMAIL
