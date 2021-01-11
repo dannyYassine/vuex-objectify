@@ -6,7 +6,7 @@ export const VuexObjectify = {
    * @param Vue
    * @param {object} options
    */
-  install(Vue, options) {
+  install(Vue, options = {}) {
     if (!options.store) {
       throw new Error('Missing required Vuex Store');
     }

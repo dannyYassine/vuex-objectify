@@ -8,7 +8,6 @@ export const createStore = () => {
     },
     mutations: {
       setIncrement (state, { increment }) {
-        console.log(1);
         state.count = increment;
       }
     },

@@ -1,6 +1,9 @@
+import Vuex from "vuex";
 import { shallowMount } from '../main';
 import Empty from '../Empty';
-import { dispatches, commits, getters } from '../../src';
+import VuexObjectify, { dispatches, commits, getters } from '../../src';
+import { createLocalVue, shallowMount as vueShallowMount } from '@vue/test-utils'
+import { createStore } from '../store';
 
 describe("HelloWorld.vue", () => {
   
@@ -109,4 +112,36 @@ describe("HelloWorld.vue", () => {
       expect(getters.countSub.normalCount).toEqual(store.state.count.sub.count);
     });
   });
+  
+  describe('Plugin Options', () => {
+    test('should throw error when store is missing', done => {
+      const localVue = createLocalVue();
+      localVue.use(Vuex);
+      
+      try {
+        localVue.use(VuexObjectify);
+        vueShallowMount(Empty, { localVue });
+      } catch (e) {
+        expect(e.message).toBe('Missing required Vuex Store');
+        done();
+      }
+    })
+    
+    test('should attach the vuex-objectify objects to Vue instance', () => {
+      const localVue = createLocalVue();
+      localVue.use(Vuex);
+      const store = createStore()
+      
+      localVue.use(VuexObjectify, { store, attachToVue: true });
+      wrapper = vueShallowMount(Empty, { localVue, store });
+      
+      expect(wrapper.vm.$dispatches).toBeDefined();
+      expect(wrapper.vm.$commits).toBeDefined();
+      expect(wrapper.vm.$getters).toBeDefined();
+  
+      expect(wrapper.vm.$dispatches).toBe(dispatches);
+      expect(wrapper.vm.$commits).toBe(commits);
+      expect(wrapper.vm.$getters).toBe(getters);
+    })
+  })
 });
