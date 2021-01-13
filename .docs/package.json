@@ -12,6 +12,7 @@
   "dependencies": {
     "buefy": "^0.9.4",
     "core-js": "^3.6.5",
+    "firebase": "^8.2.2",
     "sass": "^1.32.0",
     "sass-loader": "^10.1.0",
     "vue": "^2.6.11",

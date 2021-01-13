@@ -47,6 +47,9 @@ getters<span class="token punctuation">.</span>module<span class="token punctuat
         </div>
       </div>
     </section>
+    <ClientOnly>
+      <GoogleAnalytics />
+    </ClientOnly>
   </div>
 </template>
 

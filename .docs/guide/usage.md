@@ -54,7 +54,7 @@ Vue.use(VuexObjectify, { store });
 
 ## Usage
 
-You can start using `vuex-objectivity` anywhere in your application:
+You can start using `vuex-objectify` anywhere in your application:
 
 ```javascript
 import { dispatches, commits, getters } from 'vuex-objectify';
