@@ -1,6 +1,6 @@
 {
   "name": "vuex-objectify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Creating an interface to communicate with the vuex store",
   "main": "src/index.js",
   "scripts": {

@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<p style="text-align:center">
 <p align="center">
 <img height="400px" style="max-width:100%" src="https://github.com/dannyYassine/vuex-objectify/blob/master/.docs/.vuepress/public/logo.png?raw=true" alt="logo.png">
 </p>
@@ -7,6 +7,12 @@
 <a href='https://www.npmjs.com/package/vuex-objectify'><img src='https://img.shields.io/npm/v/vuex-objectify.svg' alt='Coverage Status' /></a>
 <a href='https://travis-ci.org/dannyYassine/vuex-objectify'><img src='https://travis-ci.org/dannyYassine/vuex-objectify.svg?branch=master' alt='Build Status' /></a>
 <a href='https://coveralls.io/github/dannyYassine/vuex-objectify?branch=master'><img src='https://coveralls.io/repos/github/dannyYassine/vuex-objectify/badge.svg?branch=master' alt='Coverage Status' /></a>
+</p>
+
+<p align="center">
+    <a><img src="https://img.shields.io/bundlephobia/min/vuex-objectify.svg" alt="Minified size"></a>
+    <a href="https://npm-stat.com/charts.html?package=vuex-objectify"><img src="https://img.shields.io/npm/dm/vuex-objectify.svg" alt="Downloads"></a>
+    <a href="https://david-dm.org/dannyyassine/vuex-objectify"><img src="https://img.shields.io/david/dannyyassine/vuex-objectify.svg" alt="Dependencies"></a>
 </p>
 
 <p align="center">
