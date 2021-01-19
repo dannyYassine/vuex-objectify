@@ -42,6 +42,11 @@ getters<span class="token punctuation">.</span>module<span class="token punctuat
         <p class="sub-description animate-delay-1">
           No more <b>constants</b>, no more <b>strings</b>
         </p>
+        <p class="sub-description animate-delay-1">
+          Also accessible via the <router-link to="/guide/access_from_console">
+          javascript console
+        </router-link>
+        </p>
         <div class="my-editor animate-delay-3 animate-delay-3" @click="onCodeClicked">
           $ yarn add vuex-objectify
         </div>
@@ -69,7 +74,9 @@ name: "HomePage",
       navigator.clipboard.writeText('yarn add vuex-objectify').then(() => {
         /* Alert the copied text */
         Notification.open({
-          message: 'Copied to clipboard!'
+          message: 'Copied to clipboard!',
+          type: 'is-info',
+          position: 'is-bottom-right'
         })
       })
     }
@@ -82,7 +89,7 @@ name: "HomePage",
   height: 100vh;
 }
 section {
-  margin: 40px auto;
+  margin: 20px auto;
   text-align: center;
   max-width: 1200px;
   display: flex;
